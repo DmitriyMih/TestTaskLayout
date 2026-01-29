@@ -73,3 +73,83 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Plugins.meta
+Assets/Plugins/Sirenix.meta
+Assets/Plugins/Sirenix/Assemblies.meta
+Assets/Plugins/Sirenix/Assemblies/link.xml
+Assets/Plugins/Sirenix/Assemblies/link.xml.meta
+Assets/Plugins/Sirenix/Assemblies/NoEditor.meta
+Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll
+Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll.meta
+Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll
+Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll.meta
+Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor.meta
+Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Serialization.dll
+Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Serialization.dll.meta
+Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.dll
+Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.dll.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll
+Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.xml
+Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.xml.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll
+Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.xml
+Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.xml.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Reflection.Editor.dll
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Reflection.Editor.dll.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.xml
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.xml.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.xml
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.xml.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.xml
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.xml.meta
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.xml
+Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.xml.meta
+Assets/Plugins/Sirenix/Demos.meta
+Assets/Plugins/Sirenix/Odin Inspector.meta
+Assets/Plugins/Sirenix/Odin Inspector/Assets.meta
+Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor.meta
+Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/Bootstrap License.txt
+Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/Bootstrap License.txt.meta
+Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/ConfigData.bytes
+Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/ConfigData.bytes.meta
+Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/OdinPathLookup.asset
+Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/OdinPathLookup.asset.meta
+Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/SdfIconAtlas.png
+Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/SdfIconAtlas.png.meta
+Assets/Plugins/Sirenix/Odin Inspector/Config.meta
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor.meta
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/GeneralDrawerConfig.asset
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/GeneralDrawerConfig.asset.meta
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset.meta
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset.meta
+Assets/Plugins/Sirenix/Odin Inspector/Modules.meta
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables.data
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables.data.meta
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Entities.data
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Entities.data.meta
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Localization.data
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Localization.data.meta
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics.data
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics.data.meta
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics.meta
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/manifest.txt
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/manifest.txt.meta
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/MathematicsDrawers.cs
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/MathematicsDrawers.cs.meta
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/Sirenix.OdinInspector.Modules.UnityMathematics.asmdef
+Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/Sirenix.OdinInspector.Modules.UnityMathematics.asmdef.meta
+Assets/Plugins/Sirenix/Readme.txt
+Assets/Plugins/Sirenix/Readme.txt.meta
+ProjectSettings/ProjectSettings.asset
