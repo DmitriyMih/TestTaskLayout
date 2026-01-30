@@ -9,7 +9,7 @@ The focus of the project is **clean Animator control without complex Animator tr
 ---
 
 ## How to run
-1. Open the project in **Unity 6.2**
+1. Open the project in **Unity 2022 and the future**
 2. Open the scene: Assets/Scenes/SplashScreen.unity
 3. Press **Play**
 
