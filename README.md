@@ -1,15 +1,18 @@
-# Unity UI Layout & Animation
+# Unity UI Layout & Splash Screen Flow
 
-This repository contains a small Unity project demonstrating:
-- adaptive UI layout (portrait mode)
-- simple, modular UI animation logic based on Animator
+This repository contains a Unity 6.2 project demonstrating a clean and minimal
+approach to portrait UI layout and splash screen initialization.
 
-The focus of the project is **clean Animator control without complex Animator transitions**.
+The project focuses on:
+- adaptive portrait UI layout
+- simple splash screen flow
+- dependency injection via VContainer
+- centralized scene management via a catalog (no hardcoded scene strings)
 
 ---
 
 ## How to run
-1. Open the project in **Unity 2022 and the future**
+1. Open the project in **Unity 6.2**
 2. Open the scene: Assets/Scenes/SplashScreen.unity
 3. Press **Play**
 
@@ -17,90 +20,53 @@ The focus of the project is **clean Animator control without complex Animator tr
 
 ## What is implemented
 
-### Adaptive UI layout
-- Portrait-oriented UI
-- Canvas Scaler with reference resolution
-- Safe Area handling for different screen sizes
+### Global application scope
+- A single `GlobalLifetimeScope` acts as the composition root
+- It persists between scenes (`DontDestroyOnLoad`)
+- Registers global services (scene navigation, scene catalog)
 
-### Animator-driven UI animations
-UI animations are built using small, independent components instead of large
-Animator graphs with many transitions.
+### Centralized scene catalog
+- A single `SceneCatalog` ScriptableObject is used as the source of truth for scenes
+- It is stored in `Resources/SceneCatalog.asset` and loaded automatically
+- Scenes are addressed by **keys** (e.g. `Menu`) instead of string literals
+- Entries can be enabled/disabled
+- A tool button can synchronize the catalog with Unity Build Settings
+- Inspector UI is implemented using **Odin Inspector**
 
-Each component solves a single problem:
-- delaying animation start
-- detecting animation completion
-- switching Animator Controllers
-- starting specific Animator states
-- optional animation desynchronization
-
----
-
-## Core animation flow
-
-A typical UI element follows this sequence:
-
-Delay
-→ Fade-in animation (UIShow)
-→ Animator Controller switch
-→ Explicit state start (UIScale / UIRotation / etc)
-
-
-This approach allows:
-- reuse of the same Animator Controllers across multiple UI elements
-- different animation behavior per object
-- predictable animation order
+### Splash screen flow
+- Splash screen has its own LifetimeScope
+- `SplashScreenManager` is initialized via DI
+- Current behavior: wait N seconds → load next scene (by key)
+- Next scene is selected via an Odin dropdown using keys from `SceneCatalog`
+- No manual scene name strings are used in gameplay/configuration code
 
 ---
 
-## Components overview
+## Architecture overview
 
-All animation-related scripts are located in: Assets/Scripts/Presentation/Animations
+GlobalLifetimeScope
+├─ SceneCatalog
+└─ SceneNavigator
 
+SplashScreenLifetimeScope
+└─ SplashScreenManager
+   └─ Delay → Load scene by key
 
-### AnimatorDelayActivator
-Disables the Animator on start, waits for a fixed or random delay,
-then enables the Animator to start the appearance animation.
-
-### AnimatorAutoSwitchOnComplete
-Monitors completion of a specified Animator state and switches to another
-Animator Controller when the state finishes.
-
-### AnimatorStateRouter
-Explicitly starts a configured Animator state.
-Used when a controller does not automatically start a state (Entry → Empty).
-
-### AnimatorRandomStart
-Optional component used to desynchronize repeated UI animations
-by randomizing delay, speed, and animation phase.
-
----
-
-## Example setup (single UI element)
-
-Components on one UI object:
-
-Animator
-AnimatorDelayActivator
-AnimatorAutoSwitchOnComplete
-AnimatorStateRouter
-
-
-Flow:
-1. AnimatorDelayActivator waits before enabling the Animator
-2. UIShow animation plays
-3. AnimatorAutoSwitchOnComplete switches the Animator Controller
-4. AnimatorStateRouter starts the required state in the new controller
-
-Component interaction is configured via **UnityEvent in the Inspector**.
+This structure is intentionally minimal and can be extended later with:
+- authorization
+- resource preloading
+- remote config
+without changing scene setup approach.
 
 ---
 
 ## Dependencies
-- **Odin Inspector** — used only for improved Inspector UI and conditional fields
+- **VContainer** — dependency injection
+- **Odin Inspector** — inspector UI and editor tooling
 
 ---
 
 ## Notes
-- Animation Events inside clips are intentionally avoided
-- Animation logic is handled in code, not Animator transition graphs
-- Components are safe to use on multiple objects sharing the same Animator Controller
+- Scene configuration is centralized and editor-friendly
+- The runtime uses scene keys, not hardcoded scene names
+- The repository is kept minimal to match the test requirements
