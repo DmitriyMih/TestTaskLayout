@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 20045623}
   - component: {fileID: 20045622}
   - component: {fileID: 20045625}
-  - component: {fileID: 20045624}
   - component: {fileID: 20045626}
   m_Layer: 5
   m_Name: Icon
@@ -197,28 +196,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20045620}
   m_CullTransparentMesh: 1
---- !u!114 &20045624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20045620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89664e15c9ba5e0468e4a6d76613a932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorRandomStart
-  animator: {fileID: 20045625}
-  useRandomDelay: 1
-  delay: 0.25
-  minDelay: 0
-  maxDelay: 0.6
-  randomizeNormalizedTime: 1
-  randomizeSpeed: 1
-  minSpeed: 0.9
-  maxSpeed: 1.1
-  deterministic: 1
 --- !u!95 &20045625
 Animator:
   serializedVersion: 7
@@ -250,12 +227,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 20045620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bced80c718ab4a4d8d0a9addd6f61e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 834a02e5887fc5e4192fff03b59d89c3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorStateRouter
+  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorRandomStart
   animator: {fileID: 20045625}
-  targetState: UIScale1
-  playOnEnable: 1
+  useRandomDelay: 1
+  delay: 0.25
+  minDelay: 0
+  maxDelay: 0.6
+  randomizeNormalizedTime: 0
+  randomizeSpeed: 1
+  minSpeed: 0.85
+  maxSpeed: 1
+  deterministic: 1
 --- !u!1 &99337848
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +350,55 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105369450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &173612888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 173612890}
+  - component: {fileID: 173612889}
+  m_Layer: 0
+  m_Name: SplashScreenScope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &173612889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173612888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b6a755db5650b45ade580c27040e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Composition.SplashScreenLifetimeScope
+  parentReference:
+    TypeName: 
+  autoRun: 1
+  autoInjectGameObjects: []
+  nextSceneKey: SplashScreen
+--- !u!4 &173612890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173612888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -671,17 +704,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 509305294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c825382fe8f15074e898a3ef3cc520d9, type: 3}
+  m_Script: {fileID: 11500000, guid: c0cef73410e1a7d4e986a8f79135e45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorDelayActivator
   animator: {fileID: 509305298}
   useRandomDelay: 0
   delay: 0.75
-  minDelay: 0.5
+  minDelay: 0
   maxDelay: 0.5
   applyInitialStateOnce: 1
   deterministic: 0
-  _initialized: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +863,6 @@ GameObject:
   - component: {fileID: 547295520}
   - component: {fileID: 547295519}
   - component: {fileID: 547295522}
-  - component: {fileID: 547295521}
   - component: {fileID: 547295523}
   m_Layer: 5
   m_Name: Icon
@@ -897,28 +928,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547295517}
   m_CullTransparentMesh: 1
---- !u!114 &547295521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547295517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89664e15c9ba5e0468e4a6d76613a932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorRandomStart
-  animator: {fileID: 547295522}
-  useRandomDelay: 1
-  delay: 0.25
-  minDelay: 0
-  maxDelay: 0.6
-  randomizeNormalizedTime: 1
-  randomizeSpeed: 1
-  minSpeed: 0.9
-  maxSpeed: 1.1
-  deterministic: 1
 --- !u!95 &547295522
 Animator:
   serializedVersion: 7
@@ -950,12 +959,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 547295517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bced80c718ab4a4d8d0a9addd6f61e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 834a02e5887fc5e4192fff03b59d89c3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorStateRouter
+  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorRandomStart
   animator: {fileID: 547295522}
-  targetState: UIScale1
-  playOnEnable: 1
+  useRandomDelay: 1
+  delay: 0.25
+  minDelay: 0
+  maxDelay: 0.6
+  randomizeNormalizedTime: 0
+  randomizeSpeed: 1
+  minSpeed: 0.85
+  maxSpeed: 1
+  deterministic: 1
 --- !u!1 &604023531
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,9 +984,8 @@ GameObject:
   - component: {fileID: 604023534}
   - component: {fileID: 604023533}
   - component: {fileID: 604023535}
-  - component: {fileID: 604023536}
   - component: {fileID: 604023537}
-  - component: {fileID: 604023538}
+  - component: {fileID: 604023536}
   m_Layer: 5
   m_Name: TitleHint
   m_TagString: Untagged
@@ -1066,17 +1081,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 604023531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c825382fe8f15074e898a3ef3cc520d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 68af4cacd2562c14582d12bd9ffc4e47, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorDelayActivator
+  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorAutoSwitchOnComplete
   animator: {fileID: 604023535}
-  useRandomDelay: 1
-  delay: 2
-  minDelay: 1.8
-  maxDelay: 2.2
-  applyInitialStateOnce: 1
-  deterministic: 1
-  _initialized: 0
+  nextController: {fileID: 9100000, guid: df42890f5f327f74cac07448b9b1e9a0, type: 2}
+  waitStateName: UIShow
+  playStateAfterSwitch: UIScale2
+  onSwitched:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &604023537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,34 +1100,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 604023531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9916ffb5db3f6d64fba96593945f592e, type: 3}
+  m_Script: {fileID: 11500000, guid: c0cef73410e1a7d4e986a8f79135e45a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorAutoSwitchOnComplete
+  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorDelayActivator
   animator: {fileID: 604023535}
-  nextController: {fileID: 9100000, guid: 61d0a819b23b2a344a39164995f6336e, type: 2}
-  waitStateName: UIShow
-  playStateAfterSwitch: 
-  onSwitched:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 604023538}, m_TargetAssemblyTypeName: TestTaskLayout.Presentation.Animations.AnimatorStateRouter, Assembly-CSharp, m_MethodName: PlayTarget, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  _switched: 0
---- !u!114 &604023538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604023531}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bced80c718ab4a4d8d0a9addd6f61e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorStateRouter
-  animator: {fileID: 604023535}
-  targetState: UIScale2
-  playOnEnable: 0
+  useRandomDelay: 0
+  delay: 1.5
+  minDelay: 0
+  maxDelay: 0.5
+  applyInitialStateOnce: 1
+  deterministic: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,7 +1349,6 @@ GameObject:
   - component: {fileID: 1326695805}
   - component: {fileID: 1326695804}
   - component: {fileID: 1326695807}
-  - component: {fileID: 1326695806}
   - component: {fileID: 1326695808}
   m_Layer: 5
   m_Name: Icon
@@ -1419,28 +1414,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326695802}
   m_CullTransparentMesh: 1
---- !u!114 &1326695806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326695802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89664e15c9ba5e0468e4a6d76613a932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorRandomStart
-  animator: {fileID: 1326695807}
-  useRandomDelay: 1
-  delay: 0.25
-  minDelay: 0
-  maxDelay: 0.6
-  randomizeNormalizedTime: 1
-  randomizeSpeed: 1
-  minSpeed: 0.9
-  maxSpeed: 1.1
-  deterministic: 1
 --- !u!95 &1326695807
 Animator:
   serializedVersion: 7
@@ -1472,12 +1445,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1326695802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bced80c718ab4a4d8d0a9addd6f61e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 834a02e5887fc5e4192fff03b59d89c3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorStateRouter
+  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorRandomStart
   animator: {fileID: 1326695807}
-  targetState: UIScale1
-  playOnEnable: 1
+  useRandomDelay: 1
+  delay: 0.25
+  minDelay: 0
+  maxDelay: 0.6
+  randomizeNormalizedTime: 0
+  randomizeSpeed: 1
+  minSpeed: 0.85
+  maxSpeed: 1
+  deterministic: 1
 --- !u!1 &1618591997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,7 +1652,6 @@ GameObject:
   - component: {fileID: 1909384498}
   - component: {fileID: 1909384497}
   - component: {fileID: 1909384500}
-  - component: {fileID: 1909384501}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -1768,7 +1747,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1909384495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89664e15c9ba5e0468e4a6d76613a932, type: 3}
+  m_Script: {fileID: 11500000, guid: 834a02e5887fc5e4192fff03b59d89c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorRandomStart
   animator: {fileID: 1909384497}
@@ -1776,26 +1755,11 @@ MonoBehaviour:
   delay: 0.25
   minDelay: 0
   maxDelay: 0.6
-  randomizeNormalizedTime: 1
+  randomizeNormalizedTime: 0
   randomizeSpeed: 1
-  minSpeed: 0.9
-  maxSpeed: 1.1
+  minSpeed: 0.85
+  maxSpeed: 1
   deterministic: 1
---- !u!114 &1909384501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909384495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bced80c718ab4a4d8d0a9addd6f61e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorStateRouter
-  animator: {fileID: 1909384497}
-  targetState: UIScale1
-  playOnEnable: 1
 --- !u!1 &2063734933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,7 +1772,7 @@ GameObject:
   - component: {fileID: 2063734936}
   - component: {fileID: 2063734935}
   - component: {fileID: 2063734937}
-  - component: {fileID: 2063734938}
+  - component: {fileID: 2063734939}
   m_Layer: 5
   m_Name: TitlePart2
   m_TagString: Untagged
@@ -1895,7 +1859,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2063734938
+--- !u!114 &2063734939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1904,17 +1868,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2063734933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c825382fe8f15074e898a3ef3cc520d9, type: 3}
+  m_Script: {fileID: 11500000, guid: c0cef73410e1a7d4e986a8f79135e45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestTaskLayout.Presentation.Animations.AnimatorDelayActivator
   animator: {fileID: 2063734937}
   useRandomDelay: 0
   delay: 1
-  minDelay: 0.75
-  maxDelay: 0.75
+  minDelay: 0
+  maxDelay: 0.5
   applyInitialStateOnce: 1
   deterministic: 0
-  _initialized: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1923,3 +1886,4 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1757863332}
   - {fileID: 105369453}
+  - {fileID: 173612890}
